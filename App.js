@@ -65,18 +65,7 @@ const Application = () => {
     }
    
   }
-  const handleclear=(e)=>{
-    
-    if (e.target.value === "") {
-      setCurrentWeather();
-      setLocation();
-      setForecast();
-      setCity();
-      setCitySuggest();
-
-    }
-    console.log("cleared")
-  }
+ 
   const handleSelectedcity = (selectedCity) => {
     console.log("clicked city", selectedCity);
     setCity(selectedCity)
@@ -117,7 +106,7 @@ const Application = () => {
           <p className='text-center text-color red p-3'> <img src={sun} style={{ maxWidth: "60px", maxHeight: "60px" }} /><h3 className="mt-2"><i>To Fetch Weather</i></h3></p>
           <input type="Text" value={city} className="form-control" placeholder='Enter City' id="exampleInputPassword1" onChange={handleinput} />
          
-          <button type="button" class=" Clear btn btn-danger mt-2 " onClick={handleclear}>Clear</button>
+         
 
 
           {citySuggest && citySuggest.map((data) => {
